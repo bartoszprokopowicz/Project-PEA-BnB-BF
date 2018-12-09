@@ -5,6 +5,7 @@
 #include "Graph.h"
 #include "tspBruteForce.h"
 #include "tspBranchnBound.h"
+#include "tspSimulatedAnnealing.h"
 #include "TimeMeasure.h"
 
 class menu
@@ -14,6 +15,7 @@ private:
 	graph graph;
 	tspBruteForce TSPbruteforce;
 	tspBranchnBound TSPbranchnbound;
+	tspSimulatedAnnealing TSPsimulatedannealing;
 	results result;
 
 public:

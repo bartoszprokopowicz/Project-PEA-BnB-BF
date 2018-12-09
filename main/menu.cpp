@@ -20,9 +20,12 @@ int menu::loop()
 		cout << "0 - Wczytaj z pliku dane" << endl;
 		cout << "1 - Wygeneruj dane" << endl;
 		cout << "2 - Pokaz graf" << endl;
+		cout << "--------Algorytmy Doklade---------" << endl;
 		cout << "3 - TSP Brute Force" << endl;
 		cout << "4 - TSP Branch & Bound" << endl;
-		cout << "5 - Wyjdz" << endl;
+		cout << "--------Algorytmy poszukiwania lokalnego---------" << endl;
+		cout << "5 - TSP Symulacja wyzarzania" << endl;
+		cout << "6 - Wyjdz" << endl;
 
 		cin >> choose;
 
@@ -91,6 +94,28 @@ int menu::loop()
 			}
 			break;
 		case 5:
+			float initTemp;
+			float coolingTemp;
+			float minTemp;
+			int iterations;
+			cout << "Podaj wartosci poczatkowe" << endl;
+			cout << "Temp poczatkowa: ";
+			cin >> initTemp;
+			cout << endl;
+			cout << "Temp chlodzenia: ";
+			cin >> coolingTemp;
+			cout << endl;
+			cout << "Temp minimalna: ";
+			cin >> minTemp;
+			cout << endl;
+			cout << "ilosc powtorzen: ";
+			cin >> iterations;
+			cout << endl;
+			TSPsimulatedannealing = tspSimulatedAnnealing(graph.getMatrix(), initTemp, coolingTemp, minTemp, iterations);
+			result = TSPsimulatedannealing.simulatedAnnealing();
+			printResult(result);
+			break;
+		case 6:
 			return 1;
 			break;
 		default:

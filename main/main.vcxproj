@@ -160,6 +160,7 @@
     <ClInclude Include="treeNode.h" />
     <ClInclude Include="tspBranchnBound.h" />
     <ClInclude Include="tspBruteForce.h" />
+    <ClInclude Include="tspSimulatedAnnealing.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="graph.cpp" />
@@ -175,6 +176,7 @@
     <ClCompile Include="treeNode.cpp" />
     <ClCompile Include="tspBranchnBound.cpp" />
     <ClCompile Include="tspBruteForce.cpp" />
+    <ClCompile Include="tspSimulatedAnnealing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="main.rc" />
